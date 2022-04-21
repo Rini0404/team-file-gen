@@ -1,3 +1,4 @@
+const { Console } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -64,6 +65,7 @@ const render = (employees) => {
         default:
         return "Something is wrong.."
       }
+
     }
 );
 
@@ -80,14 +82,14 @@ const render = (employees) => {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./styel.css">
+  <link rel="stylesheet" href="./style.css">
     <title>My Team</title>
   </head>
   <header class = "bg-blue-400 text-center w-full min-h-12 p-8 text-4xl	 text-black		">
     <h1>My Team</h1>
   </header>
   <body>
-
+    ${team}
   </body>
   </html>
 

@@ -14,67 +14,21 @@ const distPath = path.join(DIST_DIR, 'index.html');
 
 // change later? (answers)
     const rolePrompts = () => {
-      // questions to get data in inquirer
+      // messages to get data in inquirer
       inquirer.prompt([{
-        type: 'input',
+        type: 'list',
         name: 'employeeRole',
-        question: 'What is your role in our company?',
-        choices: ['Manager', 'Engineer', 'Intern']
+        message: 'Now who do you want to add?',
+        choices: ['Engineer', 'Intern', 'Im done.']
       }
       ])
-      .then ((answers => {
-        if (answers.employeeRole === 'Manager') {
-          managerPrompts(); // adds the data to the funtion of managerPrompts later
-        } else if (answers.employeeRole === 'Engineer'){
+      .then ((answers) => {
+        // if (answers.employeeRole === 'Manager') {
+        //   managerPrompts(); // adds the data to the function of managerPrompts later
+        if (answers.employeeRole === 'Engineer'){
           engineerPrompts(); // same 
         } else if (answers.employeeRole === 'Intern'){
           internPrompts(); 
-        } else (answers.employeeRole === '')
-          return 'Select a role!'
-      }));
-
-
-// console.log(rolePrompts);
-
-    const managerPrompts = () => {
-      inquirer.prompt([
-        {
-        type: 'input',
-        name: 'managerName',
-        question: 'What is your name?'
-        },
-        {
-        type: 'input',
-        name: 'managerId',
-        question: 'What is your ID?'
-        },
-        {
-          type: 'input',
-          name: 'managerEmail',
-          question: 'What is your email address?'
-        },
-        {
-          type: 'input',
-          name: 'managerOfficeNumber',
-          question: 'What is your office number?'
-        },
-        // add another employee
-        {
-          type: 'confirm',
-          name: 'newEmployee',
-          question: 'Would you like to add a new employee?',
-        }
-      ])
-
-      .then((answers => {
-        // grab all data, 
-        const Manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
-        // add to the array .push
-        employeeArray.push(Manager);
-        console.log(employeeArray);
-        // if yes is hit on adding a new employee, run if conditional
-        if (answers.newEmployee === true) {
-          rolePrompts(); // run the firts function here
         } else {
           let data = render(employeeArray);
           // write file 
@@ -83,10 +37,51 @@ const distPath = path.join(DIST_DIR, 'index.html');
             console.log('Congrats! You have saved your entry!')
         })
         }
-      }))
+        
+      });
+    }
+
+// console.log(rolePrompts);
+
+    const managerPrompts = () => {
+      inquirer.prompt([
+        {
+        type: 'input',
+        name: 'managerName',
+        message: 'What is your name?'
+        },
+        {
+        type: 'input',
+        name: 'managerId',
+        message: 'What is your ID?'
+        },
+        {
+          type: 'input',
+          name: 'managerEmail',
+          message: 'What is your email address?'
+        },
+        {
+          type: 'input',
+          name: 'managerOfficeNumber',
+          message: 'What is your office number?'
+        },
+        // add another employee
+  
+      ])
+
+      .then((answers) => {
+        // grab all data, 
+        const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+        // add to the array .push
+        employeeArray.push(manager);
+        // if yes is hit on adding a new employee, run if conditional
+      
+          rolePrompts(); // run the  function here
+  
+      })
 
     };
-    managerPrompts(); 
+  
 
 
     const engineerPrompts = () => {
@@ -96,53 +91,42 @@ const distPath = path.join(DIST_DIR, 'index.html');
         {
           type: 'input',
           name: 'engineerName',
-          question: 'What is your name?', 
+          message: 'What is your name?', 
 
         },
         {
           type: 'input',
           name: 'engineerId',
-          question: 'What is your Id?', 
+          message: 'What is your Id?', 
 
         },
         {
           type: 'input',
           name: 'engineerEmail',
-          question: 'What is your Email address?'  
+          message: 'What is your Email address?'  
 
         },
         {
           type: 'input',
           name: 'engineerGithub',
-          question: 'What is your Github username?', 
+          message: 'What is your Github username?', 
 
         },
-        {
-          type: 'confirm',
-          name: 'newEmployee',
-          question: 'Would you like to add a new employee?', 
-
-        },
+      
       ])  
-      .then((answers => {
+      .then((answers) => {
         // grab all data, 
-        const Engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
+        const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         // add to the array .push
         employeeArray.push(Engineer);
         // if yes is hit on adding a new employee, run if conditional
-        if (answers.newEmployee === true) {
+        
           rolePrompts(); // run the firts function here
-        } else {
-          var data = render(employeeArray);
-          // write file 
-          fs.writeFile('index.html', data, (err) => {
-            if (err) throw err; 
-            console.log('Congrats! You have saved your entry!')
-        })
-        }
-      }))
+        
+          // write file
+      })
     };
-    engineerPrompts(); 
+    
 
 
 
@@ -152,49 +136,36 @@ const distPath = path.join(DIST_DIR, 'index.html');
         { 
           type: 'input',
           name: 'internName',
-          question: 'What is your name?'
+          message: 'What is your name?'
         },
         { 
           type: 'input',
           name: 'internId',
-          question: 'What is your ID?'
+          message: 'What is your ID?'
         },
         { 
           type: 'input',
           name: 'internEmail',
-          question: 'What is your email address?'
+          message: 'What is your email address?'
         },
         { 
           type: 'input',
           name: 'internSchool',
-          question: 'What school do you currently attend?'
+          message: 'What school do you currently attend?'
         },
-        { 
-          type: 'confirm',
-          name: 'newEmployee',
-          question: 'Would you like to add a new Employee?'
-        }
+        
       ])
-      .then((answers => {
+      .then((answers) => {
         // grab all data, 
         const Intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
         // add to the array .push
         employeeArray.push(Intern);
         // if yes is hit on adding a new employee, run if conditional
-        if (answers.newEmployee === true) {
-          rolePrompts(); // run the firts function here
-        } else {
-          var data = render(employeeArray);
-          // write file 
-          fs.writeFile('index.html', data, (err) => {
-            if (err) throw err; 
-            console.log('Congrats! You have saved your entry!')
-        })
-        }
-      }))
-    }
-    internPrompts(); 
+          rolePrompts(); // run the  function here
 
-  }
-rolePrompts();
+          // write file 
+      })
+    }
+  
+    managerPrompts();
 
