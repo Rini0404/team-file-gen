@@ -28,7 +28,7 @@
 # 📌installation
 ## Clone My Repo here!: https://github.com/Rini0404/team-file-gen  then, npm install, and after that run the index.js!
 # 📝Steps
-## .
+## ```
 ├── __tests__/             //jest tests
 │   ├── Employee.test.js
 │   ├── Engineer.test.js
@@ -39,7 +39,8 @@
 ├── src/                   // template helper code 
 ├── .gitignore             // indicates which folders and files Git should ignore
 ├── index.js               // runs the application
-└── package.json           
+└── package.json    
+```
 # 📟Languages
 ## JavaScript, HTML, Node.JS, and CSS
 # 🎭Contributors to the project
