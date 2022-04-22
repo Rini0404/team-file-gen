@@ -29,7 +29,7 @@
 ## Clone My Repo here!: https://github.com/Rini0404/team-file-gen  then, npm install, and after that run the index.js!
 # 📝Steps
 ##
-```├── __tests__/             //jest tests
+├── __tests__/             //jest tests
 │   ├── Employee.test.js
 │   ├── Engineer.test.js
 │   ├── Intern.test.js
