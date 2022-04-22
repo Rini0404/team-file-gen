@@ -40,7 +40,6 @@
 ├── .gitignore             // indicates which folders and files Git should ignore
 ├── index.js               // runs the application
 └── package.json    
-```
 # 📟Languages
 ## JavaScript, HTML, Node.JS, and CSS
 # 🎭Contributors to the project
