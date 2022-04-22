@@ -24,7 +24,7 @@
 # 🔎My Repo
 ## [Repo](https://github.com/Rini0404/team-file-gen)
 # 🖇Live Link
-## n/a
+## Look at the Live Preview! https://drive.google.com/file/d/1KkqkufhYhxUZkEwfs7HJS4fDDeRt2yFZ/view
 # 📌installation
 ## Clone My Repo here!: https://github.com/Rini0404/team-file-gen  then, npm install, and after that run the index.js!
 # 📝Steps
