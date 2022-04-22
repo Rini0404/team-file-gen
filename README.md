@@ -24,10 +24,12 @@
 # 🔎My Repo
 ## [Repo](https://github.com/Rini0404/team-file-gen)
 # 🖇Live Link
-## n/a
+## Look at the Live Preview! https://drive.google.com/file/d/1KkqkufhYhxUZkEwfs7HJS4fDDeRt2yFZ/view
 # 📌installation
 ## Clone My Repo here!: https://github.com/Rini0404/team-file-gen  then, npm install, and after that run the index.js!
 # 📝Steps
+## Created the Intern, Manager, Employee, and Engineer JS Files using constructors.
+## Then, build a HTML Page layout, then iplimented the page-template, then the Index.JS with all the Inquirer prompts!
 ```
 ├── __tests__/             //jest tests
 │   ├── Employee.test.js
@@ -41,6 +43,7 @@
 ├── index.js               // runs the application
 └── package.json 
 ```
+
 # 📟Languages
 ## JavaScript, HTML, Node.JS, and CSS
 # 🎭Contributors to the project
