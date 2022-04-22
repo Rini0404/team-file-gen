@@ -18,13 +18,13 @@
 # 🎟Title
 ## Team File Generator!
 # 🖼Picture
-## n/a
+## ![image](https://user-images.githubusercontent.com/95727555/164733348-cec6c8dc-a38a-4b52-b481-5a8e11c935f9.png)
 # 📖Description
 ## A Node.JS application that generates a teams ID cards with their information! Using JavaScript, HTML, and CSS!
 # 🔎My Repo
 ## [Repo](https://github.com/Rini0404/team-file-gen)
 # 🖇Live Link
-## Look at the Live Preview! https://drive.google.com/file/d/1KkqkufhYhxUZkEwfs7HJS4fDDeRt2yFZ/view
+## Look at the Live Preview! https://drive.google.com/file/d/1pV3eQNktbVPTTq8BfTYdk-ePTcYadzFq/view
 # 📌installation
 ## Clone My Repo here!: https://github.com/Rini0404/team-file-gen  then, npm install, and after that run the index.js!
 # 📝Steps
