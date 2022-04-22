@@ -12,13 +12,13 @@ const render = (employees) => {
         <div class="card w-96 bg-base-100 shadow-xl m-6  ">
       <div class="card-header min-h-12 bg-blue-400 text-center">
         <h2>Name: ${employee.getName()}</h2>
-        <h2>Title:${employee.getRole()}</h2> </h2>
+        <h2>Title: ${employee.getRole()}</h2> </h2>
         <h2>📝</h2>
       </div>
         <div class="card-body">
-          <p class = "group-item">ID:${employee.getId()} </p>
-          <p class = "group-item">Email:${employee.getEmail()}</p>
-          <p class = "group-item">Office number:${employee.getEmail()}</p>
+          <p class = "group-item">ID: ${employee.getId()} </p>
+          <p class = "group-item">Email: ${employee.getEmail()}</p>
+          <p class = "group-item">Office number: ${employee.getOfficeNumber()}</p>
           </div>
         </div>        
          `; //make sure to add ;
@@ -28,13 +28,13 @@ const render = (employees) => {
             team += `
             <div class="card w-96 bg-base-100 shadow-xl m-6 ">
         <div class="card-header min-h-12 bg-blue-400 text-center">
-            <h2>Name:${employee.getName()}</h2>
+            <h2>Name: ${employee.getName()}</h2>
             <h2>Title: ${employee.getRole()} </h2>
             <h2>💻</h2>
           </div>
           <div class="card-body">
-            <p class = "group-item">ID:${employee.getId()} </p>
-            <p class = "group-item">Email:${employee.getEmail()}</p>
+            <p class = "group-item">ID: ${employee.getId()} </p>
+            <p class = "group-item">Email: ${employee.getEmail()}</p>
             <p class = "group-item"><a href = "https://github.com/Rini0404">Github:${employee.getGithub()}</a></p>
             </div>
         </div>
@@ -44,14 +44,14 @@ const render = (employees) => {
             team += `
             <div class="card w-96 bg-base-100 shadow-xl m-6 ">
             <div class="card-header min-h-12 bg-blue-400 text-center">
-                <h2>Name:${employee.getName()}</h2>
+                <h2>Name: ${employee.getName()}</h2>
                 <h2>Title: ${employee.getRole()}</h2>
                 <h2>😎</h2>
               </div>
               <div class="card-body">
                 <p class = "group-item">ID: ${employee.getId()}</p> </p>
-                <p class = "group-item">Email:${employee.getEmail()}</p>
-                <p class = "group-item">School:${employee.getSchool()}</p>
+                <p class = "group-item">Email: ${employee.getEmail()}</p>
+                <p class = "group-item">School: ${employee.getSchool()}</p>
                 </div>
             </div> 
             `;
