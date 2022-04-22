@@ -1,4 +1,3 @@
-const { Console } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -10,56 +9,51 @@ const render = (employees) => {
       switch(employee.getRole()) {
         case "Manager" : 
         team += `
-        <div class="card w-96 bg-base-100 shadow-xl ">
-        <div class="card-header min-h-12 bg-blue-400 text-center">
-          <h2>Name: ${employee.getName()}</h2>
-          <h2>Title: ${employee.getRole()}</h2>
-          <h2>📝</h2>
-        </div>
-          <div class="card-body">
-            <p class = "group-item">ID:${employee.getId()} </p>
-            <p class = "group-item">Email:${employee.getEmail()}</p>
-            <p class = "group-item">Office number:${employee.getOfficeNumber()}</p>
-            </div>
+        <div class="card w-96 bg-base-100 shadow-xl m-6  ">
+      <div class="card-header min-h-12 bg-blue-400 text-center">
+        <h2>Name:</h2>
+        <h2>Title: Manager</h2>
+        <h2>📝</h2>
+      </div>
+        <div class="card-body">
+          <p class = "group-item">ID:${employee.getId()} </p>
+          <p class = "group-item">Email:${employee.getEmail()}</p>
+          <p class = "group-item">Office number:${employee.getEmail()}</p>
           </div>
-        
-        
+        </div>        
          `; //make sure to add ;
 
          break; // next 
           case  "Engineer": 
             team += `
-            <div class="card w-96 bg-base-100 shadow-xl ">
-            <div class="card-header min-h-12 bg-blue-400 text-center">
-              <h2>Name: ${employee.getName()}</h2>
-              <h2>Title: ${employee.getRole()}</h2>
-              <h2>💻</h2>
+            <div class="card w-96 bg-base-100 shadow-xl m-6 ">
+        <div class="card-header min-h-12 bg-blue-400 text-center">
+            <h2>Name:</h2>
+            <h2>Title: Engineer </h2>
+            <h2>💻</h2>
+          </div>
+          <div class="card-body">
+            <p class = "group-item">ID:${employee.getId()} </p>
+            <p class = "group-item">Email:${employee.getEmail()}</p>
+            <p class = "group-item">Github:${employee.getGithub()}</p>
             </div>
-              <div class="card-body">
-                <p class = "group-item">ID:${employee.getId()} </p>
-                <p class = "group-item">Email:${employee.getEmail()}</p>
-                <p class = "group-item">Office number:${employee.getGithub()}</p>
-                </div>
-              </div>
+        </div>
             `;
             break;
-            case 'Intern' : 
+            case 'Intern': 
             team += `
-            <div class="card w-96 bg-base-100 shadow-xl ">
+            <div class="card w-96 bg-base-100 shadow-xl m-6 ">
             <div class="card-header min-h-12 bg-blue-400 text-center">
-              <h2>Name: ${employee.getName()}</h2>
-              <h2>Title: ${employee.getRole()}</h2>
-              <h2>😎</h2>
-            </div>
-              <div class="card-body">
-                <p class = "group-item">ID:${employee.getId()} </p>
-                <p class = "group-item">Email:${employee.getEmail()}</p>
-                <p class = "group-item">Office number:${employee.getSchool()}</p>
-                </div>
+                <h2>Name:</h2>
+                <h2>Title: Intern</h2>
+                <h2>😎</h2>
               </div>
-            
-            
-            
+              <div class="card-body">
+                <p class = "group-item">ID: ${employee.getId()}</p> </p>
+                <p class = "group-item">Email:${employee.getEmail()}</p>
+                <p class = "group-item">School:${employee.getSchool()}</p>
+                </div>
+            </div> 
             `;
             break;
         default:
@@ -70,7 +64,6 @@ const render = (employees) => {
 );
 
   const htmlP = `
-
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -82,14 +75,17 @@ const render = (employees) => {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./Style.css">
     <title>My Team</title>
   </head>
   <header class = "bg-blue-400 text-center w-full min-h-12 p-8 text-4xl	 text-black		">
     <h1>My Team</h1>
   </header>
   <body>
+  <section class = "aye flex-wrap">
     ${team}
+    </section>
+
   </body>
   </html>
 

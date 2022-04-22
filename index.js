@@ -6,7 +6,6 @@ const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const render = require('./src/page-template')
 const employeeArray = [];
-const idArray = [];
 const DIST_DIR = path.resolve(__dirname, 'dist');
 const distPath = path.join(DIST_DIR, 'index.html');
 
@@ -118,7 +117,7 @@ const distPath = path.join(DIST_DIR, 'index.html');
         // grab all data, 
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         // add to the array .push
-        employeeArray.push(Engineer);
+        employeeArray.push(engineer);
         // if yes is hit on adding a new employee, run if conditional
         
           rolePrompts(); // run the firts function here
@@ -157,9 +156,9 @@ const distPath = path.join(DIST_DIR, 'index.html');
       ])
       .then((answers) => {
         // grab all data, 
-        const Intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
+        const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
         // add to the array .push
-        employeeArray.push(Intern);
+        employeeArray.push(intern);
         // if yes is hit on adding a new employee, run if conditional
           rolePrompts(); // run the  function here
 
