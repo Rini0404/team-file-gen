@@ -11,8 +11,8 @@ const render = (employees) => {
         team += `
         <div class="card w-96 bg-base-100 shadow-xl m-6  ">
       <div class="card-header min-h-12 bg-blue-400 text-center">
-        <h2>Name:</h2>
-        <h2>Title: Manager</h2>
+        <h2>Name: ${employee.getName()}</h2>
+        <h2>Title:${employee.getRole()}</h2> </h2>
         <h2>📝</h2>
       </div>
         <div class="card-body">
@@ -28,14 +28,14 @@ const render = (employees) => {
             team += `
             <div class="card w-96 bg-base-100 shadow-xl m-6 ">
         <div class="card-header min-h-12 bg-blue-400 text-center">
-            <h2>Name:</h2>
-            <h2>Title: Engineer </h2>
+            <h2>Name:${employee.getName()}</h2>
+            <h2>Title: ${employee.getRole()} </h2>
             <h2>💻</h2>
           </div>
           <div class="card-body">
             <p class = "group-item">ID:${employee.getId()} </p>
             <p class = "group-item">Email:${employee.getEmail()}</p>
-            <p class = "group-item">Github:${employee.getGithub()}</p>
+            <p class = "group-item"><a href = "https://github.com/Rini0404">Github:${employee.getGithub()}</a></p>
             </div>
         </div>
             `;
@@ -44,8 +44,8 @@ const render = (employees) => {
             team += `
             <div class="card w-96 bg-base-100 shadow-xl m-6 ">
             <div class="card-header min-h-12 bg-blue-400 text-center">
-                <h2>Name:</h2>
-                <h2>Title: Intern</h2>
+                <h2>Name:${employee.getName()}</h2>
+                <h2>Title: ${employee.getRole()}</h2>
                 <h2>😎</h2>
               </div>
               <div class="card-body">
@@ -75,14 +75,14 @@ const render = (employees) => {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./Style.css">
+  <link rel="stylesheet" href="./dist/Style.css">
     <title>My Team</title>
   </head>
   <header class = "bg-blue-400 text-center w-full min-h-12 p-8 text-4xl	 text-black		">
     <h1>My Team</h1>
   </header>
   <body>
-  <section class = "aye flex-wrap">
+  <section class = "aye">
     ${team}
     </section>
 
